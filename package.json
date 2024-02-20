@@ -1,5 +1,5 @@
 {
-  "name": "@strapi-newsletter-custom/strapi",
+  "name": "strapi-newsletter-custom",
   "version": "0.1.2",
   "description": "Send Newsletters Easily with Strapi",
   "strapi": {
