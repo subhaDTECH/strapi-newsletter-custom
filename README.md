@@ -16,7 +16,7 @@ yarn add @strapi-newsletter/strapi
 
 ## Usage 💄
 
-You have two available providers to use, namely,
+You have three available providers to use, namely,
 
 1. Mailchimp
 2. ConvertKit

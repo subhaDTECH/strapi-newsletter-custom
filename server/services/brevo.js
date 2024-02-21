@@ -130,7 +130,6 @@ module.exports = () => ({
       });
 
       const data = await resposeData.json();
-      console.log(data, "data");
 
       const apiUrl = "https://api.brevo.com/v3/smtp/email";
 
@@ -139,7 +138,8 @@ module.exports = () => ({
           name: user.email,
           email: user.email,
         },
-        to: data.contacts,
+        // to: data.contacts,
+        bcc: data.contacts,
         subject: body.subject,
         htmlContent: body.body,
       };
