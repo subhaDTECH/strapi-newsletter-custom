@@ -1,6 +1,6 @@
 {
   "name": "strapi-newsletter-custom",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Send Newsletters Easily with Strapi",
   "strapi": {
     "name": "strapi-newsletter",
