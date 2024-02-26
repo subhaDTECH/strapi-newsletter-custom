@@ -40,4 +40,8 @@ You can use any of these providers to send newsletters. First of all, you need t
 
 3. After you have installed your plugin, go to strapi settings and choose the `Strapi Newsletter` settings.
 
+4.Then your users should register to your newsletter in-order for them to receive newsletter. To do this you can use the following package provided by strapi-newsletter on the frontend. It's a simple and easy way to register to your newsletter OR you can send a POST request to the following endpoint with the email in the body of the POST request.
+
+POST {YOUR_STRAPI_INSTANCE}/strapi-newsletter/newsletter/subscribe
+
 This plugin is built on top of the original Strapi Newsletter plugin, which you can find [here](https://www.npmjs.com/package/@strapi-newsletter/strapi), created by [osadavc](https://www.npmjs.com/~osadavc). I have used this plugin as a reference and modified its code to add support for the Brevo email provider.

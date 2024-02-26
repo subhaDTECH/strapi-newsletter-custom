@@ -20,11 +20,22 @@ const HomePage = () => {
   const [hasSetup, setHasSetup] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(true);
 
-  React.useEffect(async () => {
-    const { data } = await getSetup();
+  // React.useEffect(async () => {
+  //   const { data } = await getSetup();
+  //   console.log(data, "data");
 
-    setHasSetup(data);
-    setIsLoading(false);
+  //   setHasSetup(data);
+  //   setIsLoading(false);
+  // }, []);
+
+  React.useEffect(() => {
+    getSetup()
+      .then((data1) => {
+        console.log(data1.data, "data1");
+        setHasSetup(data1.data);
+        setIsLoading(false);
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   return (
@@ -61,7 +72,7 @@ const HomePage = () => {
               content="You haven't set up your newsletter provider yet."
               action={
                 <Link
-                  to="/settings/strapi-newsletter"
+                  to="/settings/strapi-newsletter-custom"
                   style={{
                     textDecoration: "none",
                   }}
